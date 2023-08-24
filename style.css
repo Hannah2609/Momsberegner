@@ -1,0 +1,39 @@
+body {
+    background-color: rgb(240, 234, 219);
+    text-align: center;
+}
+.momsberegner {
+    margin: 5em;
+    padding: 3em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+.beregner {
+    display: flex;
+    flex-direction: column;
+}
+button {
+    height: 40px;
+    margin-inline: 7em;
+    margin-top: 3em;
+    background-color:black;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 13px;
+}
+
+input {
+    margin-inline: 9em;
+    margin-top: 5px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    border: solid 2px;
+}
+label {
+    margin-top: 1em;
+}
+#result {
+    color: rgb(46, 61, 102);
+}

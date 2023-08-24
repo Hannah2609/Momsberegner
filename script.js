@@ -3,25 +3,22 @@
 
 momsBeregner(100, 20);
 
-function momsBeregner (beløb, moms = 25) {
+function momsBeregner (belob, moms = 25) {
 
-console.log(beløb + (beløb / 100) * moms);
+console.log(belob + (belob / 100) * moms);
 }
-
-
 
 // nedenstående er et forsøg
 
 // document.querySelector("button").addEventListener("click", momsBeregner);
 
-// function momsBeregner(belob, moms = 25) {
-//  belob = document.querySelector("#belob");
-//  moms = document.querySelector("#moms");
-//  const resultText = document.querySelector("#result");
- 
-//  let result = belob + (belob / 100) * moms;
+// function momsBeregner() {
+//   const belob = document.querySelector("#belob");
+//   const momsInput = document.querySelector("#moms");
+//   const moms = momsInput || 25;
 
-//  resultText.textContent = $(result);
+//   const resultText = document.querySelector("#result");
+//   const result = belob + (belob * moms) / 100;
 
-//   console.log(belob + (belob / 100) * moms);
+//   resultText.textContent = result;
 // }
