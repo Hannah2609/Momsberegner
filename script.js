@@ -1,24 +1,45 @@
 "use strict";
-// Nedenstående udskriver i konsol hvis beløb = 100 og moms = 20.
+// Nedenstående udskriver i konsol hvis beløb = 100 og moms = 20:
+// moms er standart
 
-momsBeregner(100, 20);
+// momsBeregner(100, 20);
 
-function momsBeregner (belob, moms = 25) {
+// function momsBeregner (belob, moms = 25) {
 
-console.log(belob + (belob / 100) * moms);
+// console.log(belob + (belob / 100) * moms);
+// }
+
+// nedenstående er et forsøg:
+
+const belobElm = document.querySelector("#belob");
+const momsInputElm = document.querySelector("#moms");
+
+const resultText = document.querySelector("#result");
+document.querySelector("button").addEventListener("click", klik);
+
+function klik() {
+  const belobInput = parseInt(belobElm.value);
+  const momsInput =  parseInt(momsInputElm.value);
+  resultText.textContent = momsBeregner(belobInput,momsInput);
+  console.log("klik", belobInput,momsInput);
 }
 
-// nedenstående er et forsøg
+function momsBeregner(belob, moms) {
+  const result = belob + (belob * moms) / 100;
 
-// document.querySelector("button").addEventListener("click", momsBeregner);
+  return result;
+}
 
-// function momsBeregner() {
-//   const belob = document.querySelector("#belob");
-//   const momsInput = document.querySelector("#moms");
-//   const moms = momsInput || 25;
+// console.log(momsBeregner(100, 25));
+// Return i konsol:
 
-//   const resultText = document.querySelector("#result");
-//   const result = belob + (belob * moms) / 100;
+// const belob = 100;
+// const momsetBelob = momsBeregner(belob, moms = 25);
 
-//   resultText.textContent = result;
+// function momsBeregner (belob, moms = 25) {
+// const result = belob + (belob / 100) * moms;
+// console.log(`beløb plus moms`, result);
+
+// return result;
+
 // }
